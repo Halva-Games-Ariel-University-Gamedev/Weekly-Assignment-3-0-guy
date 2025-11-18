@@ -64,8 +64,8 @@ public class LaserShooter : ClickSpawner
         lastShotTime = Time.time;
         remainingShots--;
 
-        GameObject newObject = base.spawnObject(); 
-        if (newObject == null) return null; 
+        GameObject newObject = base.spawnObject();
+        if (newObject == null) return null;
 
         DestroyOnTrigger2D newObjectDestroyer = newObject.GetComponent<DestroyOnTrigger2D>();
         if (newObjectDestroyer)
@@ -80,13 +80,13 @@ public class LaserShooter : ClickSpawner
     private IEnumerator ApplyRecoil()
     {
         Vector3 originalPos = transform.localPosition;
-        Vector3 recoilOffset = -transform.right * recoilAmount; 
+        Vector3 recoilOffset = -transform.right * recoilAmount;
 
         //(recoil)
         transform.localPosition += recoilOffset;
         yield return new WaitForSeconds(recoilDuration / 2f);
 
-        
+
         transform.localPosition = originalPos;
     }
 }

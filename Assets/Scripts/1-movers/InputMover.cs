@@ -7,16 +7,20 @@ using UnityEngine.InputSystem;
 public class InputMover : MonoBehaviour
 {
     [Tooltip("Speed of movement, in meters per second")]
-    [SerializeField] float speed = 10f;
+    [SerializeField]
+    float speed = 10f;
 
     [Tooltip("Dash speed (faster than regular movement)")]
-    [SerializeField] float dashSpeed = 30f;
+    [SerializeField]
+    float dashSpeed = 30f;
 
     [Tooltip("Duration of the dash in seconds")]
-    [SerializeField] float dashDuration = 0.2f;
+    [SerializeField]
+    float dashDuration = 0.2f;
 
     [Tooltip("Cooldown between dashes in seconds")]
-    [SerializeField] float dashCooldown = 1f;
+    [SerializeField]
+    float dashCooldown = 1f;
 
     [SerializeField]
     InputAction move = new InputAction(
